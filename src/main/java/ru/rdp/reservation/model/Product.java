@@ -30,7 +30,6 @@ public class Product {
     @Column(nullable = false)
     private Long version = 0L;
 
-
     public void setId(UUID id) {
         this.id = id;
     }
@@ -38,4 +37,21 @@ public class Product {
     public UUID getId() {
         return id;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getStock() {
+        return stock;
+    }
+
+    public void setStock(Integer stock) {
+        this.stock = stock;
+    }
+
 }

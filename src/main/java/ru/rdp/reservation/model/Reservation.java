@@ -37,12 +37,23 @@ public class Reservation {
     @Column(nullable = false)
     private ReservationStatus status;
 
-    @CreationTimestamp
     @Column(nullable = false, updatable = false)
     private Instant createdAt;
 
     @Column(nullable = false)
     private Instant expiresAt;
+
+    public void setStatus(ReservationStatus status) {
+        this.status = status;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
 
     public Product getProduct() {
         return product;
@@ -50,5 +61,33 @@ public class Reservation {
 
     public void setProduct(Product product) {
         this.product = product;
+    }
+
+    public Instant getExpiresAt() {
+        return expiresAt;
+    }
+
+    public void setExpiresAt(Instant expiresAt) {
+        this.expiresAt = expiresAt;
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public Instant getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Instant createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public ReservationStatus getStatus() {
+        return status;
     }
 }
