@@ -14,3 +14,7 @@ spring:
     properties:
       hibernate:
         format_sql: true
+
+app:
+  reservation:
+    expiration-minutes: 10
